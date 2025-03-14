@@ -7,22 +7,26 @@
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label Text="WELCOME TO CALCULTOR APP"
            FontSize="25"
-           HorizontalTextAlignment="Center"
->
+           HorizontalTextAlignment="Start">
         </Label>
         <Border BackgroundColor="DarkGray"
                 StrokeThickness="2"
                 HeightRequest="100"
-                HorizontalOptions="Fill"
+                HorizontalOptions="Start"
                 VerticalOptions="Center">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
 
             <!-- Grid inside Border to overlay BoxView and Label -->
             <Grid>
                 <!-- BoxView as background -->
-                <BoxView Color="Gray"
+                <BoxView Color="Black"
                          HeightRequest="150"
                          HorizontalOptions="Fill"
-                         VerticalOptions="Center" />
+                         VerticalOptions="Center" 
+                         />
+
 
                 <!-- Label on top of BoxView -->
                 <Label x:Name="myLabel"
@@ -30,17 +34,20 @@
                        VerticalTextAlignment="Center"
                        HorizontalTextAlignment="Center"
                        TextColor="White" 
-                       FontSize="40"/>
+                       FontSize="40"
+                       />
+                
             </Grid>
 
         </Border>
             <!--this part changes the verticle space ,  this part pushes all buttons to the left-->
-            <Grid RowDefinitions="80,80,80,80" ColumnDefinitions="90,90,90,90"> 
+            <Grid RowDefinitions="80,80,80,80,80" ColumnDefinitions="90,90,90,90"> 
                 <!-- First Row -->
-            <Button Text="+/-" Grid.Row="0" Grid.Column="0" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="ChangeSign"/>
-            <Button Text="0" Grid.Row="0" Grid.Column="1" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
-            <Button Text="/" Grid.Row="0" Grid.Column="2" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnSymClicked"/>
-            <Button Text="AC" Grid.Row="0" Grid.Column="3"  WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="CLEAR"/>
+            <Button Text="AC" Grid.Row="0" Grid.Column="0"  WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="CLEAR"/>
+            <Button Text="+/-" Grid.Row="0" Grid.Column="1" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="ChangeSign"/>
+            <Button Text="0" Grid.Row="0" Grid.Column="2" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
+            <Button Text="/" Grid.Row="0" Grid.Column="3" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnSymClicked"/>
+            
             
 
                 <!-- Second Row -->
@@ -61,13 +68,12 @@
             <Button Text="9" Grid.Row="3" Grid.Column="2" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
             <Button Text="+" Grid.Row="3" Grid.Column="3" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnSymClicked"/>
 
+
+            <Button x:Name="calcButton" Grid.Row="4" Grid.Column="3" Text="=" FontSize="25" Clicked="OnButtonClicked" HeightRequest="50" WidthRequest="50"/>
         </Grid>
 
             <!-- Button Underneath -->
-        <Button x:Name="calcButton" 
-            Text="="
-            FontSize="25"
-            Clicked="OnButtonClicked" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center"/>
+      
     </VerticalStackLayout>
 
 
