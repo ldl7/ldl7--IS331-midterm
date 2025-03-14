@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="calculator.MainPage">
+             x:Class="calculator.MainPage"
+             BackgroundColor="{StaticResource Gray600}">
 
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label Text="WELCOME TO CALCULTOR APP"
@@ -9,7 +10,7 @@
            HorizontalTextAlignment="Center"
 >
         </Label>
-        <Border BackgroundColor="Transparent"
+        <Border BackgroundColor="DarkGray"
                 StrokeThickness="2"
                 HeightRequest="100"
                 HorizontalOptions="Fill"
@@ -33,8 +34,8 @@
             </Grid>
 
         </Border>
-
-            <Grid RowDefinitions="80,80,80,80" ColumnDefinitions="*,*,*,*">
+            <!--this part changes the verticle space ,  this part pushes all buttons to the left-->
+            <Grid RowDefinitions="80,80,80,80" ColumnDefinitions="90,90,90,90"> 
                 <!-- First Row -->
             <Button Text="+/-" Grid.Row="0" Grid.Column="0" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="ChangeSign"/>
             <Button Text="0" Grid.Row="0" Grid.Column="1" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
