@@ -56,7 +56,7 @@ namespace calculator
             {
                 myLabel.Text = "";
                 screenText = "";
-                isClear = false;
+                isClear = false;           
             }
             screenText += ((Button)sender).Text;
             myLabel.Text += ((Button)sender).Text;

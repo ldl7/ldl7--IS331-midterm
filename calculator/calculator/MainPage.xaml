@@ -19,7 +19,7 @@
             <Grid>
                 <!-- BoxView as background -->
                 <BoxView Color="Gray"
-                         HeightRequest="100"
+                         HeightRequest="150"
                          HorizontalOptions="Fill"
                          VerticalOptions="Center" />
 
@@ -38,8 +38,9 @@
                 <!-- First Row -->
             <Button Text="+/-" Grid.Row="0" Grid.Column="0" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="ChangeSign"/>
             <Button Text="0" Grid.Row="0" Grid.Column="1" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
-            <Button Text="AC" Grid.Row="0" Grid.Column="2"  WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="CLEAR"/>
-            <Button Text="/" Grid.Row="0" Grid.Column="3" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnSymClicked"/>
+            <Button Text="/" Grid.Row="0" Grid.Column="2" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnSymClicked"/>
+            <Button Text="AC" Grid.Row="0" Grid.Column="3"  WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="CLEAR"/>
+            
 
                 <!-- Second Row -->
             <Button Text="1" Grid.Row="1" Grid.Column="0" WidthRequest="75" HeightRequest="75" CornerRadius="50" Clicked="OnNumberClicked"/>
@@ -63,9 +64,9 @@
 
             <!-- Button Underneath -->
         <Button x:Name="calcButton" 
-            Text="CALCULATE NOW"
+            Text="="
             FontSize="25"
-            Clicked="OnButtonClicked" HeightRequest="50" WidthRequest="350" HorizontalOptions="Center"/>
+            Clicked="OnButtonClicked" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center"/>
     </VerticalStackLayout>
 
 
